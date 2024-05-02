@@ -2,16 +2,16 @@
   "name": "project",
   "version": "1.0.0",
   "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "node ace test"
+    }
+  },
   "scripts": {
     "dev": "node ace serve --watch",
     "build": "node ace build --production",
     "start": "node server.js",
     "test": "node ace test"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "node ace test"
-    }
   },
   "devDependencies": {
     "@adonisjs/assembler": "^5.9.6",
