@@ -7,7 +7,6 @@
       "pre-commit": "node ace test"
     }
   },
-  "test": "test",
   "scripts": {
     "dev": "node ace serve --watch",
     "build": "node ace build --production",
