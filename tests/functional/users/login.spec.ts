@@ -8,8 +8,8 @@ test.group('Login de usuário', (group) => {
     await Database.beginGlobalTransaction()
     return () => Database.rollbackGlobalTransaction()
   })
-  
-  test('Deve logar um usuário com sucesso', async ({ assert, client }, group) => {
+
+  test('Deve logar um usuário com sucesso', async ({ assert, client }) => {
   //criando um usuário aleatório
   const user = await UserFactory.create();
 
