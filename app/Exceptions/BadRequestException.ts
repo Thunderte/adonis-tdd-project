@@ -14,7 +14,7 @@ import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 |
 */
 export default class BadRequestException extends Exception {
-    constructor(message: string, code: string) {
+    constructor(message: string, code: string = "BAD_REQUEST_EXCEPTION") {
         super(message, 400, code);
     }
 
