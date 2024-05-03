@@ -5,4 +5,9 @@ export default class UserService {
         const user = await User.create({ name, email, password });
         return user;
     }
+
+    public static async findUserById(id: number) {
+        const user = await User.find(id);
+        return user;
+    }
   }
