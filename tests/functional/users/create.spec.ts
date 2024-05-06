@@ -29,7 +29,7 @@ test.group('Criar conta', (group) => {
     test('Deve retornar erro ao tentar criar usuário com email já cadastrado', async ({ client }) => {
        
       //encontrando uma conta já existente
-      const user = await UserService.findUserById();
+      const user = await UserService.findUserRandom();
 
       //realizando a requisição
       const response = await client.post('/signup').form({

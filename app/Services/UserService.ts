@@ -9,7 +9,7 @@ export default class UserService {
             return user;
     }
 
-    public static async findUserById() {
+    public static async findUserRandom() {
         const user = await Database.query().from('users').first();
 
         return user;
