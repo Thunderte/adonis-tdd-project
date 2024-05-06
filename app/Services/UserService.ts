@@ -10,7 +10,7 @@ export default class UserService {
     }
 
     public static async findUserRandom() {
-        const user = await Database.query().from('users').first();
+        const user = await User.first();
 
         return user;
     }
