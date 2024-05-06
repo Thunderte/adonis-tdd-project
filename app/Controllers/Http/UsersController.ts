@@ -10,9 +10,11 @@ export default class UsersController {
 
         const data = request.only(['name', 'email', 'password']);
 
-        const user = await UserService.createUser(data.name, data.email, data.password);
+        const verificandoEmail = await UserService.findUserByEmail(data.email);
 
-        if(!user) throw new BadRequestException('Erro ao criar usuário', 'E_CREATE_USER');
+        if(!verificandoEmail) throw new BadRequestException('Email já cadastrado');
+
+        const user = await UserService.createUser(data.name, data.email, data.password);
 
         return user;
     }

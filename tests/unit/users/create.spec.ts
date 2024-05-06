@@ -17,7 +17,7 @@ test.group('Criar usuário', (group) => {
     //gerando email aleatório
     const email = Math.random().toString(36).substring(7) + '@teste.com';
 
-    const response = await UserService.createUser(username, email, '12345678')
+    const response = await UserService.createUser(username, email, '12345678');
 
     //verificando se o usuário foi criado
     assert.exists(response.id)
