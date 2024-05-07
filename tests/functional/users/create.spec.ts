@@ -30,12 +30,11 @@ test.group('Criar conta', (group) => {
        
       //encontrando uma conta já existente
       const user = await UserService.findUserRandom();
-
-      console.log(user)
+      
       //realizando a requisição
       const response = await client.post('/signup').form({
         name: 'Teste',
-        email: user.email,
+        email: user?.email,
         password: '12345678'
     })
     

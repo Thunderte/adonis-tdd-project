@@ -1,6 +1,5 @@
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import UserValidator from 'App/Validators/UserValidator'; 
-import User from 'App/Models/User';
 import BadRequestException from 'App/Exceptions/BadRequestException';
 import UserService from 'App/Services/UserService';
 
