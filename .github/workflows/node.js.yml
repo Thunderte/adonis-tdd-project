@@ -28,7 +28,7 @@ jobs:
         cache: 'npm'
         run: echo $APP_KEY
       env:
-        APP_KEY: ${{ secrets.APP_KEY }}
+        APP_KEY: 4_SDdufmeGOlmU13jLT-vbYxjYkES-4v
     - run: npm ci
     - run: node ace generate:key
     - run: npm run test
