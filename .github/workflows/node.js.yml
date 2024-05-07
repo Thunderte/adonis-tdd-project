@@ -26,9 +26,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        run: echo $APP_KEY
-      env:
-        APP_KEY: 4_SDdufmeGOlmU13jLT-vbYxjYkES-4v
+    - name: create env file
+      run: |
+        touch .env
+        echo APP_KEY=${{ secrets.APP_KEY }} >> .env
     - run: npm ci
     - run: node ace generate:key
     - run: npm run test
