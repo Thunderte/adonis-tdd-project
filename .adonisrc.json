@@ -15,7 +15,8 @@
   },
   "preloads": [
     "./start/routes",
-    "./start/kernel"
+    "./start/kernel",
+    "./start/events"
   ],
   "providers": [
     "./providers/AppProvider",
@@ -39,6 +40,13 @@
         "name": "unit",
         "files": [
           "tests/unit/**/*.spec(.ts|.js)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "name": "unit-venda",
+        "files": [
+          "tests/unit/venda/*.spec(.ts|.js)"
         ],
         "timeout": 60000
       }

@@ -23,3 +23,7 @@ import Route from '@ioc:Adonis/Core/Route'
 Route.post('/signup', 'UsersController.store');
 
 Route.post('/signin', 'SessionsController.login');
+
+Route.group(() => {
+    Route.resource('vendas', 'VendasController').apiOnly();
+})
